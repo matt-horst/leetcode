@@ -1,0 +1,18 @@
+import (
+	"fmt"
+	"testing"
+	"github.com/stretchr/testify/assert"
+)
+
+func Test(t *testing.T) {
+	cases := []struct {
+		expected int
+	}{}
+
+	for i, c := range cases {
+		t.Run(fmt.Sprintf("Case %d", i), func() {
+			result := 0
+			assert.Equal(t, c.expected, result)
+		})
+	}
+}
